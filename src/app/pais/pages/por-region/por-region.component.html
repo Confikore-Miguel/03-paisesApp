@@ -1,0 +1,19 @@
+<div class="row">
+    <div class="col-12">
+        <h2>Por region </h2>
+        <hr>
+        <ul class="btn-group start-50 translate-middle pe-5 mt-3" role="group">
+            <li *ngFor="let region of regiones">
+                <a  (click)="buscar( region )"
+                    class="btn btn-dark me-1">
+                    {{region | titlecase }}
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="row">
+        <div class="col">
+            <app-tabla [paises:child]="paises"></app-tabla>
+        </div>
+    </div>
+</div>

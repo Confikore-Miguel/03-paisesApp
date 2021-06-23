@@ -1,0 +1,14 @@
+<div class="row">
+  <div class="col">
+    <h2>Por Pais</h2>
+    <hr>
+    <app-input (onTermino)="buscar( $event )"></app-input>
+
+    <div *ngIf="hayError" 
+         class="alert alert-danger m-2">
+      No se encontro nada con el termino "{{termino}}"
+    </div>
+    <hr>
+  </div>
+  <app-tabla [paises:child]="paises"></app-tabla>
+</div>
